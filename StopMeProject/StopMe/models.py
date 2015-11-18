@@ -6,7 +6,8 @@ class Station(models.Model):
     lng = models.CharField(max_length=128)
 
     def __unicode__(self):
-        return self.stationName
+#        return self.stationName
+		return str(self.id)
 
 class Route(models.Model):
 
@@ -15,12 +16,13 @@ class Route(models.Model):
     via = models.CharField(max_length = 128)
 
     def __unicode__(self):
-    	return origin+' to '+destination+' via '+via #could change this string output
-
+#    	return self.origin + ' to ' + self.destination + ' via ' + self.via
+		return str(self.id)
 
 class RouteStations(models.Model):
     routeID = models.ForeignKey(Route)
     stationID = models.ForeignKey(Station)
 
     def __unicode__(self):
-    	return routeID+stationID #could change this string output
+#    	return "ID: " + str(self.id) + " Route: " + str(self.routeID) + " Station: " + str(self.stationID)
+		return str(self.id)

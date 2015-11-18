@@ -1,7 +1,7 @@
 from django.shortcuts import render, render_to_response
 from django.http import HttpResponse
 from django.template import RequestContext
-from StopMe.models import Stations
+from StopMe.models import Station, Route, RouteStations
 
 #def index(request):
 #    return HttpResponse("Rango says hello world!")
@@ -9,6 +9,10 @@ from StopMe.models import Stations
 def index(request):
     context = RequestContext(request)
     context_dict = {}
-    station = Stations.objects.get(stationName="Partick")
-    context_dict['station'] = station
+    station = Station.objects.all()
+    print station
+    route = Route.objects.all()
+    print route
+    routestations = RouteStations.objects.all()
+    print routestations
     return render_to_response('StopMe/index.html', context_dict, context)
