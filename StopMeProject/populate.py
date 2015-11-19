@@ -1,26 +1,27 @@
 import os
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'StopMeProject.settings')
+
+import django
+django.setup()
+
+from StopMe.models import Station, Route, RouteStations
 
 def add_station(stationName, lat, lng, transtype):
-    p = Page.objects.get_or_create(stationName=stationName, lat=lat, lng=lng, transtype=transtype)[0]
+    p = Station.objects.get_or_create(stationName=stationName, lat=lat, lng=lng, transtype=transtype)[0]
     return p
 
-def add_route(origin, destination, via):
-    p = Page.objects.get_or_create(origin=origin, destination=destination, via=via)[0]
+def add_route(serviceNumber, origin, destination, via):
+    p = Route.objects.get_or_create(serviceNumber=serviceNumber, origin=origin, destination=destination, via=via)[0]
     return p
 
 def add_routestations(routeID, stationID):
-    p = Page.objects.get_or_create(routeID=routeID, stationID=stationID)[0]
+    p = RouteStations.objects.get_or_create(routeID=Route.objects.get(id=routeID), stationID=Station.objects.get(id=stationID))[0]
     return p
-
-
-
-
 
 # Start execution here!
 if __name__ == '__main__':
-    print "Starting Rango population script..."
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tango_with_django_project.settings')
-    from rango.models import Category, Page
+    print "Starting StopMe population script..."
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'StopMeProject.settings')
    
     # ADD IN OUR BUS STATIONS
     add_station('BUCHANAN STREET','55.858272','-4.255344','BUS') #SID 1
@@ -152,25 +153,25 @@ if __name__ == '__main__':
 
     # ADD IN BUS ROUTE NAMES
 
-    add_route('2','FAIFLEY','') #RID 1
-    add_route('2','BAILIESTON','') #RID 2
-    add_route('3','DRUMCHAPEL','') #RID 3
-    add_route('3','GOVAN','') #RID 4
-    add_route('6A','DRUMCHAPEL','') #RID 5
-    add_route('61','SANDYHILLS','') #RID 6
-    add_route('61','SUMMERSTON','') #RID 7
+    add_route('2','BAILIESTON','FAIFLEY','') #RID 1
+    add_route('2','FAIFLEY','BAILIESTON','') #RID 2
+    add_route('3','GOVAN','DRUMCHAPEL','') #RID 3
+    add_route('3','DRUMCHAPEL','GOVAN','') #RID 4
+    add_route('6A','GLASGOW','DRUMCHAPEL','') #RID 5
+    add_route('61','SUMMERSTON','SANDYHILLS','') #RID 6
+    add_route('61','SANDYHILLS','SUMMERSTON','') #RID 7
 
     # ADD IN TRAIN ROUTE NAMES
 
-    add_train_route('GLASGOW CENTRAL','EDINBURGH','CARLUKE') #RID 8
-    add_train_route('GLASGOW QUEEN STREET','HELENSBURGH CENTRAL','') #RID 9
-    add_train_route('GLASGOW','AIRDRIE','') #RID 10
-    add_train_route('GLASGOW QUEEN STREET','EDINBURGH','FALKIRK HIGH') #RID 11
-    add_train_route('GLASGOW CENTRAL','EDINBURGH','SHOTTS') #RID 12
-    add_train_route('GLASGOW CENTRAL','NEWTON','') #RID 13
-    add_train_route('GLASGOW CENTRAL','EAST KILBRIDE','') #RID 14
-    add_train_route('GLASGOW QUEEN STREET','ANNIESLAND','MARYHILL') #RID 15
-    add_train_route('GLASGOW CENTRAL','PAISLEY CANAL','') #RID 16
+    add_route('','GLASGOW CENTRAL','EDINBURGH','CARLUKE') #RID 8
+    add_route('','GLASGOW QUEEN STREET','HELENSBURGH CENTRAL','') #RID 9
+    add_route('','GLASGOW','AIRDRIE','') #RID 10
+    add_route('','GLASGOW QUEEN STREET','EDINBURGH','FALKIRK HIGH') #RID 11
+    add_route('','GLASGOW CENTRAL','EDINBURGH','SHOTTS') #RID 12
+    add_route('','GLASGOW CENTRAL','NEWTON','') #RID 13
+    add_route('','GLASGOW CENTRAL','EAST KILBRIDE','') #RID 14
+    add_route('','GLASGOW QUEEN STREET','ANNIESLAND','MARYHILL') #RID 15
+    add_route('','GLASGOW CENTRAL','PAISLEY CANAL','') #RID 16
 
     # BUILD THE BUS ROUTES
 

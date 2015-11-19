@@ -1,9 +1,9 @@
 from django.db import models
 
 class Station(models.Model):
-    stationName = models.CharField(max_length=128, unique=True)
-    lat = models.CharField(max_length=128)
-    lng = models.CharField(max_length=128)
+    stationName = models.CharField(max_length=128, unique=True, null=False, blank=False)
+    lat = models.FloatField(null=False, blank=False)
+    lng = models.FloatField(null=False, blank=False)
     transtype = models.CharField(max_length=128)
 
     def __unicode__(self):
@@ -11,10 +11,10 @@ class Station(models.Model):
         return str(self.id)
 
 class Route(models.Model):
-
-    origin = models.CharField(max_length = 128)
-    destination = models.CharField(max_length = 128)
-    via = models.CharField(max_length = 128)
+    serviceNumber = models.CharField(max_length = 10, null=True, blank=True)
+    origin = models.CharField(max_length = 128, null=False, blank=False)
+    destination = models.CharField(max_length = 128, null=False, blank=False)
+    via = models.CharField(max_length = 128, null=True, blank=True)
 
     def __unicode__(self):
 #       return self.origin + ' to ' + self.destination + ' via ' + self.via
