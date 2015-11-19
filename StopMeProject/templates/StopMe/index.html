@@ -3,6 +3,18 @@
 {% block title %}{{station}}{% endblock %}
 {% block body_block %}
 
+{% for station1 in station %}
+	{{ station1.id }} {{ station1.stationName }} {{ station1.lat }} {{ station1.lng }} {{ station1.transtype }}<br>
+{% endfor %}
+
+{% for station1 in route %}
+	{{ station1.id }} {{ station1.serviceNumber }} {{ station1.origin }} {{ station1.destination }} {{ station1.via }}<br>
+{% endfor %}
+
+{% for station1 in routestations %}
+	{{ station1.id }} {{ station1.routeID }} {{ station1.stationID }}<br>
+{% endfor %}
+
 <h2>Choose a destination</h2>
 <p>
 	<div class="btn-group" role="group" aria-label="...">
