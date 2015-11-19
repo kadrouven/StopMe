@@ -11,11 +11,35 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Person',
+            name='Route',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('first_name', models.CharField(max_length=30)),
-                ('last_name', models.CharField(max_length=30)),
+                ('serviceNumber', models.CharField(max_length=10, null=True, blank=True)),
+                ('origin', models.CharField(max_length=128)),
+                ('destination', models.CharField(max_length=128)),
+                ('via', models.CharField(max_length=128, null=True, blank=True)),
             ],
+        ),
+        migrations.CreateModel(
+            name='RouteStations',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('routeID', models.ForeignKey(to='StopMe.Route')),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Station',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('stationName', models.CharField(unique=True, max_length=128)),
+                ('lat', models.FloatField()),
+                ('lng', models.FloatField()),
+                ('transtype', models.CharField(max_length=128)),
+            ],
+        ),
+        migrations.AddField(
+            model_name='routestations',
+            name='stationID',
+            field=models.ForeignKey(to='StopMe.Station'),
         ),
     ]

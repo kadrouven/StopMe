@@ -10,9 +10,9 @@ def index(request):
     context = RequestContext(request)
     context_dict = {}
     station = Station.objects.all()
-    print station
+    context_dict["station"] = station
     route = Route.objects.all()
-    print route
+    context_dict["route"] = route
     routestations = RouteStations.objects.all()
-    print routestations
+    context_dict["routestations"] = routestations
     return render_to_response('StopMe/index.html', context_dict, context)
