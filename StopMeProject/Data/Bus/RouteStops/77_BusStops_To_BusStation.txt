@@ -1,0 +1,39 @@
+Glasgow Airport,Buchanan Bus Station,South Glasgow Hospital
+Glasgow Airport
+White Cart Rd
+Paisley Rd - Near Wright St - E
+Paisley Rd - Near Cockles Loan
+Paisley Rd - Near Mitchell Avenue
+Paisley Rd - Near Library
+Paisley Rd - Near Victoria Dr - E
+Paisley Rd - Near Oxford Rd
+Hairst St - Near Town Hall
+Ferry Rd - Near Orchard St
+King's Inch Rd - Near Ferry Rd - E
+King's Inch Rd - Near Andrew Ave
+King's Inch Rd - Near Intu Braehead
+King's Inch Rd - Near Braehead Shopping Centre
+Braehead Shopping Centre
+Kings Inch Dr - Near Ikea
+Shieldhall Rd - Near Renfrew Rd
+Hardgate Rd
+South Glasgow Hospital - E
+Govan Rd - Near Southern General Hospital
+Dumbarton Rd - Near Auchentorlie St - E
+Dumbarton Rd - Near Meadows Rd
+Dumbarton Rd - Near Methodist Church
+Dumbarton Rd - Near Peel St
+Dumbarton Rd - Near Partick Library
+Dumbarton Rd - Near Dowanhill St - E
+Dumbarton Rd - Near Church St - E
+Argyle St - Near Western Infirmary - E
+Argyle St - Near Kelvingrove Art Galleries - E
+Sauchiehall St - Near Clayslaps Rd
+Sauchiehall St - Near Kelvingrove St
+Sauchiehall St - Near Royal Cres
+Sauchiehall St - Near Elderslie St
+Sauchiehall St - Near Woodside Cres
+Sauchiehall St - Near Garnet St
+Sauchiehall St - Near Dental Hospital
+Renfrew St - Near Cambridge St
+Buchanan Bus Station

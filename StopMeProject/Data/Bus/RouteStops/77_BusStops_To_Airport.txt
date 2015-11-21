@@ -1,0 +1,42 @@
+Buchanan Bus Station,Glasgow Airport,South Glasgow Hospital
+Buchanan Bus Station
+Bath St - Near E Bath Ln
+Bath St - Near Wellington St St
+Bath St - Near Pitt St
+Bath St - Kings Theater
+Berkeley Street - Near Granville St
+Berkeley Street - Near Elderslie St
+Sauchiehall St - Near Royal Crescent
+Sauchiehall St - Near Derby St
+Sauchiehall St - Near Kelvin Way - W
+Argyle St - Near Kelvingrove Art Galleries - W
+Argyle St - Near Western Infirmary - W
+Dumbarton Rd - Near Church St - W
+Dumbarton Rd - Near Dowanhill St - W
+Dumbarton Rd - Partick Library
+Partick Bus Station
+Dumbarton Rd - Near Apsley St
+Dumbarton Rd - Near Auchentorlie St - W
+Govan Rd - Clachan Drive
+Govan Rd - Burghead Place
+South Glasgow Hospital - W
+Hardgate Rd - Hardgate Drive
+Shieldhall Rd - Near Hardgate Rd
+Kings Inch Dr - Ikea
+Intu Braehead
+King's Inch Rd - Old Govan Road
+King's Inch Rd - Near Laymoor Ave
+King's Inch Rd - Near Xcape Centre
+King's Inch Rd - Near Lapwing Rd
+King's Inch Rd - Near Ferry Rd - W
+Ferry Rd - Near Campbell St
+Ferry Rd - Health Centre
+Paisley Rd - Near Donaldson Drive
+Paisley Rd - Near Oxford Ln
+Paisley Rd - Near Victoria Drive - W
+Paisley Rd - Health Centre
+Paisley Rd - Near Newmains Rd
+Paisley Rd - Near Cockels Loan
+Paisley Rd - Near Wright St - W
+Renfrew Rd - Near Sandyford Rd
+Glasgow Airport

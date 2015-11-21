@@ -1,0 +1,77 @@
+White Cart Rd, 55.862790, -4.427437, Bus
+Paisley Rd - Near Wright St - E, 55.863306, -4.407120, Bus
+Paisley Rd - Near Cockles Loan, 55.866597, -4.403284, Bus
+Paisley Rd - Near Mitchell Avenue, 55.868200, -4.401323, Bus
+Paisley Rd - Near Library, 55.870590, -4.398582, Bus
+Paisley Rd - Near Victoria Dr - E, 55.872270, -4.396486, Bus
+Paisley Rd - Near Oxford Rd, 55.874917, -4.393299, Bus
+Hairst St - Near Town Hall, 55.878616, -4.387540, Bus
+Ferry Rd - Near Orchard St, 55.881644, -4.384832, Bus
+King's Inch Rd - Near Ferry Rd - E, 55.882547, -4.382537, Bus
+King's Inch Rd - Near Andrew Ave, 55.880241, -4.377748, Bus
+King's Inch Rd - Near Intu Braehead, 55.877918, -4.372630, Bus
+King's Inch Rd - Near Braehead Shopping Centre, 55.875904, -4.368466, Bus
+Braehead Shopping Centre, 55.875407, -4.362329, Bus
+Kings Inch Dr - Near Ikea, 55.869507, -4.355885, Bus
+Shieldhall Rd - Near Renfrew Rd, 55.862189, -4.351338, Bus
+Hardgate Rd, 55.860919, -4.346982, Bus
+South Glasgow Hospital - E, 55.863163, -4.341411, Bus
+Govan Rd - Near Southern General Hospital, 55.865074, -4.336255, Bus
+Dumbarton Rd - Near Auchentorlie St - E, 55.870866, -4.320663, Bus
+Dumbarton Rd - Near Meadows Rd, 55.870744, -4.318371, Bus
+Dumbarton Rd - Near Methodist Church, 55.870788, -4.313723, Bus
+Dumbarton Rd - Near Peel St, 55.870815, -4.310478, Bus
+Dumbarton Rd - Near Partick Library, 55.870889, -4.304457, Bus
+Dumbarton Rd - Near Dowanhill St - E, 55.870913, -4.301798, Bus
+Dumbarton Rd - Near Church St - E, 55.870349, -4.298689, Bus
+Argyle St - Near Western Infirmary - E, 55.869787, -4.294547, Bus
+Argyle St - Near Kelvingrove Art Galleries - E, 55.868302, -4.291836, Bus
+Sauchiehall St - Near Clayslaps Rd, 55.867202, -4.289536, Bus
+Sauchiehall St - Near Kelvingrove St, 55.865687, -4.284712, Bus
+Sauchiehall St - Near Royal Cres, 55.865725, -4.281218, Bus
+Sauchiehall St - Near Elderslie St, 55.866011, -4.277622, Bus
+Sauchiehall St - Near Woodside Cres, 55.866308, -4.273081, Bus
+Sauchiehall St - Near Garnet St, 55.866106, -4.268804, Bus
+Sauchiehall St - Near Dental Hospital, 55.865734, -4.265507, Bus
+Renfrew St - Near Cambridge St, 55.865746, -4.259150, Bus
+Buchanan Bus Station, 55.865202, -4.250321, Bus
+Bath St - Near E Bath Ln, 55.863505, -4.253966, Bus
+Bath St - Near Wellington St St, 55.864206, -4.260183, Bus
+Bath St - Near Pitt St, 55.864886, -4.265891, Bus
+Bath St - Kings Theater, 55.865268, -4.269154, Bus
+Berkeley Street - Near Granville St, 55.865230, -4.274139, Bus
+Berkeley Street - Near Elderslie St, 55.865025, -4.277096, Bus
+Sauchiehall St - Near Royal Crescent, 55.865540, -4.281372, Bus
+Sauchiehall St - Near Derby St, 55.865785, -4.285429, Bus
+Sauchiehall St - Near Kelvin Way - W, 55.866986, -4.289291, Bus
+Argyle St - Near Kelvingrove Art Galleries - W, 55.868107, -4.291901, Bus
+Argyle St - Near Western Infirmary - W, 55.869785, -4.295013, Bus
+Dumbarton Rd - Near Church St - W, 55.870021, -4.297741, Bus
+Dumbarton Rd - Near Dowanhill St - W, 55.870775, -4.301035, Bus
+Dumbarton Rd - Partick Library, 55.870751, -4.304603, Bus
+Partick Bus Station, 55.870159, -4.308613, Bus
+Dumbarton Rd - Near Apsley St, 55.870644, -4.315655, Bus
+Dumbarton Rd - Near Auchentorlie St - W, 55.870770, -4.321308, Bus
+Govan Rd - Clachan Drive, 55.864149, -4.330287, Bus
+Govan Rd - Burghead Place, 55.864349, -4.333167, Bus
+South Glasgow Hospital - W, 55.863046, -4.342183, Bus
+Hardgate Rd - Hardgate Drive, 55.860700, -4.346911, Bus
+Shieldhall Rd - Near Hardgate Rd, 55.861905, -4.351379, Bus
+Kings Inch Dr - Ikea, 55.870118, -4.356277, Bus
+Intu Braehead, 55.875297, -4.362482, Bus
+King's Inch Rd - Old Govan Road, 55.874543, -4.368616, Bus
+King's Inch Rd - Near Laymoor Ave, 55.877100, -4.371314, Bus
+King's Inch Rd - Near Xcape Centre, 55.878930, -4.375300, Bus
+King's Inch Rd - Near Lapwing Rd, 55.880634, -4.379095, Bus
+King's Inch Rd - Near Ferry Rd - W, 55.882985, -4.383530, Bus
+Ferry Rd - Near Campbell St, 55.883107, -4.384469, Bus
+Ferry Rd - Health Centre, 55.881436, -4.384615, Bus
+Paisley Rd - Near Donaldson Drive, 55.876723, -4.390470, Bus
+Paisley Rd - Near Oxford Ln, 55.874842, -4.393141, Bus
+Paisley Rd - Near Victoria Drive - W, 55.871742, -4.396839, Bus
+Paisley Rd - Health Centre, 55.870513, -4.398272, Bus
+Paisley Rd - Near Newmains Rd, 55.868423, -4.400751, Bus
+Paisley Rd - Near Cockels Loan, 55.866213, -4.403402, Bus
+Paisley Rd - Near Wright St - W, 55.863234, -4.406870, Bus
+Renfrew Rd - Near Sandyford Rd, 55.861512, -4.409995, Bus
+Glasgow Airport, 55.864015, -4.432362, Bus

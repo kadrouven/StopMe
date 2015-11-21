@@ -1,35 +1,57 @@
 {% extends 'base.html' %}
+
 {% load staticfiles %}
-{% block title %}{{station}}{% endblock %}
+
 {% block body_block %}
 
-{% for station1 in station %}
-	{{ station1.id }} {{ station1.stationName }} {{ station1.lat }} {{ station1.lng }} {{ station1.transtype }}<br>
-{% endfor %}
-
-{% for station1 in route %}
-	{{ station1.id }} {{ station1.serviceNumber }} {{ station1.origin }} {{ station1.destination }} {{ station1.via }}<br>
-{% endfor %}
-
-{% for station1 in routestations %}
-	{{ station1.id }} {{ station1.routeID }} {{ station1.stationID }}<br>
-{% endfor %}
-
-<h2>Choose a destination</h2>
-<p>
-	<div class="btn-group" role="group" aria-label="...">
-		<button type="button" class="btn btn-default" onclick="changeGoal(55.879706, -4.314566);" id='Hyndland'>Hyndland</button>
-		<button type="button" class="btn btn-default" onclick="changeGoal(55.869878, -4.308829);" id='Partick'>Partick</button>
-		<button type="button" class="btn btn-default" onclick="changeGoal(55.864638, -4.269819);" id='CharingCross'>Charing Cross</button>
-		<button type="button" class="btn btn-default" onclick="changeGoal(55.862286, -4.251094);" id='QueenStreet'>Queen Street</button>
+<div class="container">
+	<br>
+	<div class="row">
+		<div class="col-md-10 offsetHalf"></div>
+	</div><br>
+	<br>
+	<br>
+	<div class="row">
+		<h1 class="text-center">
+			<strong style="font-size:70pt;">StopMe!</strong>
+		</h1>
+		<p class="lead text-center" style="font-size:30pt;">
+			Never miss a Stop again!
+		</p>
+	</div><br>
+	<br>
+	<br>
+	<br>
+	<div class="row">
+		<div class="col-md-5 block">
+			<div class="text-center">
+				<h1>
+					Transport Near Me
+				</h1>
+				<p>
+					Let us find all transports around you. You only need to choose your transport.
+				</p>
+				<p>
+					<span class="glyphicon glyphicon-map-marker" style="font-size:6em;" aria-hidden="true"></span>
+				</p>
+				<button class="btn btn-primary btn-flat">Find</button>
+			</div>
+		</div>
+		<div class="col-md-5 col-md-offset-2 block">
+			<div class="text-center">
+				<h1>
+					Search For Transport
+				</h1>
+				<p>
+					If you are on a train or bus already, you can search for all transports'
+				</p>
+				<p>
+					<span class="glyphicon glyphicon-search" style="font-size:6em;" aria-hidden="true"></span>
+				</p>
+				<button class="btn btn-primary btn-flat">Search</button>
+			</div>
+		</div>
 	</div>
-</p>
-<div id="text"></div>
-<div id="text2"></div>
-<div id="map" style="height:85%"></div>
-</div>
 </div>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWm00u9WjNOK4f6Fr4yA06kdc4hx3Syqc&signed_in=true&callback=initMap" async defer>
-</script>
 {% endblock %}
