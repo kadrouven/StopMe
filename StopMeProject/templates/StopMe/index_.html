@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}{{station}}{% endblock %}
+{% block body_block %}
+
+{% for station1 in station %}
+	{{ station1.id }} {{ station1.stationName }} {{ station1.lat }} {{ station1.lng }} {{ station1.type }}<br>
+{% endfor %}
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWm00u9WjNOK4f6Fr4yA06kdc4hx3Syqc&signed_in=true&callback=initMap" async defer>
+</script>
+{% endblock %}

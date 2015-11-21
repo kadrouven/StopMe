@@ -1,0 +1,38 @@
+Glasgow Airport, 55.864022, -4.432372
+White Cart Rd, 55.862790, -4.427437
+Paisley Rd - Near Wright St, 55.863306, -4.407120
+Paisley Rd - Near Cockles Loan, 55.866597, -4.403284
+Paisley Rd - Near Mitchell Avenue, 55.868200, -4.401323
+Paisley Rd - Near Library, 55.870590, -4.398582
+Paisley Rd - Near Victoria Dr E, 55.872270, -4.396486
+Paisley Rd - Near Oxford Rd, 55.874917, -4.393299
+Hairst St - Near Town Hall, 55.878616, -4.387540
+Ferry Rd - Near Orchard St, 55.881644, -4.384832
+King's Inch Rd - Near Ferry Rd, 55.882547, -4.382537
+King's Inch Rd - Near Andrew Ave, 55.880241, -4.377748
+King's Inch Rd - Near Intu Braehead, 55.877918, -4.372630
+King's Inch Rd - Near Braehead Shopping Centre, 55.875904, -4.368466
+Braehead Shopping Centre, 55.875407, -4.362329
+Kings Inch Dr - Near Ikea, 55.869507, -4.355885
+Shieldhall Rd - Near Renfrew Rd, 55.862189, -4.351338
+Hardgate Rd, 55.860919, -4.346982
+South Glasgow Hospital, 55.863163, -4.341411
+Govan Rd - Near Southern General Hospital, 55.865074, -4.336255
+Dumbarton Rd - Near Auchentorlie St, 55.870866, -4.320663
+Dumbarton Rd - Near Meadows Rd, 55.870744, -4.318371
+Dumbarton Rd - Near Methodist Church, 55.870788, -4.313723
+Dumbarton Rd - Near Peel St, 55.870815, -4.310478
+Dumbarton Rd - Near Partick Library, 55.870889, -4.304457
+Dumbarton Rd - Near Dowanhill St, 55.870913, -4.301798
+Dumbarton Rd - Near Church St, 55.870349, -4.298689
+Argyle St - Near Western Infirmary, 55.869787, -4.294547
+Argyle St - Near Kelvingrove Art Galleries, 55.868302, -4.291836
+Sauchiehall St - Near Clayslaps Rd, 55.867202, -4.289536
+Sauchiehall St - Near Kelvingrove St, 55.865687, -4.284712
+Sauchiehall St - Near Royal Cres, 55.865725, -4.281218
+Sauchiehall St - Near Elderslie St, 55.866011, -4.277622
+Sauchiehall St - Near Woodside Cres, 55.866308, -4.273081
+Sauchiehall St - Near Garnet St, 55.866106, -4.268804
+Sauchiehall St - Near Dental Hospital, 55.865734, -4.265507
+Renfrew St - Near Cambridge St, 55.865746, -4.259150
+Buchanan Bus Station, 55.865202, -4.250323

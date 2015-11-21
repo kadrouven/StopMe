@@ -1,0 +1,41 @@
+Buchanan Bus Station, 55.865202, -4.250321
+Bath St - Near E Bath Ln, 55.863505, -4.253966
+Bath St - Near Wellington St St, 55.864206, -4.260183
+Bath St - Near Pitt St, 55.864886, -4.265891
+Bath St - Kings Theater, 55.865268, -4.269154
+Berkeley Street - Near Granville St, 55.865230, -4.274139
+Berkeley Street - Near Elderslie St, 55.865025, -4.277096
+Sauchiehall St - Near Royal Crescent, 55.865540, -4.281372
+Sauchiehall St - Near Derby St, 55.865785, -4.285429
+Sauchiehall St - Near Kelvin Way, 55.866986, -4.289291
+Argyle St - Near Kelvingrove Art Galleries, 55.868107, -4.291901
+Argyle St - Near Western Infirmary, 55.869785, -4.295013
+Dumbarton Rd - Near Church St, 55.870021, -4.297741
+Dumbarton Rd - Near Dowanhill St, 55.870775, -4.301035
+Dumbarton Rd - Partick Library, 55.870751, -4.304603
+Partick Bus Station, 55.870159, -4.308613
+Dumbarton Rd - Near Apsley St, 55.870644, -4.315655
+Dumbarton Rd - Near Auchentorlie St, 55.870770, -4.321308
+Govan Rd - Clachan Drive, 55.864149, -4.330287
+Govan Rd - Burghead Place, 55.864349, -4.333167
+South Glasgow Hospital, 55.863046, -4.342183
+Hardgate Rd - Hardgate Drive, 55.860700, -4.346911
+Shieldhall Rd - Near Hardgate Rd, 55.861905, -4.351379
+Kings Inch Dr - Ikea, 55.870118, -4.356277
+Intu Braehead, 55.875297, -4.362482
+King's Inch Rd - Old Govan Road, 55.874543, -4.368616
+King's Inch Rd - Near Laymoor Ave, 55.877100, -4.371314
+King's Inch Rd - Near Xcape Centre, 55.878930, -4.375300
+King's Inch Rd - Near Lapwing Rd, 55.880634, -4.379095
+King's Inch Rd - Near Ferry Rd, 55.882985, -4.383530
+Ferry Rd - Near Campbell St, 55.883107, -4.384469
+Ferry Rd - Health Centre, 55.881436, -4.384615
+Paisley Rd - Near Donaldson Drive, 55.876723, -4.390470
+Paisley Rd - Near Oxford Ln, 55.874842, -4.393141
+Paisley Rd - Near Victoria Drive E, 55.871742, -4.396839
+Paisley Rd - Health Centre, 55.870513, -4.398272
+Paisley Rd - Near Newmains Rd, 55.868423, -4.400751
+Paisley Rd - Near Cockels Loan, 55.866213, -4.403402
+Paisley Rd - Near Wright St, 55.863234, -4.406870
+Renfrew Rd - Near Sandyford Rd, 55.861512, -4.409995
+Glasgow Airport, 55.864015, -4.432362

@@ -21,10 +21,10 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='RouteStations',
+            name='RouteStation',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('routeID', models.ForeignKey(to='StopMe.Route')),
+                ('route', models.ForeignKey(to='StopMe.Route')),
             ],
         ),
         migrations.CreateModel(
@@ -34,12 +34,12 @@ class Migration(migrations.Migration):
                 ('stationName', models.CharField(unique=True, max_length=128)),
                 ('lat', models.FloatField()),
                 ('lng', models.FloatField()),
-                ('transtype', models.CharField(max_length=128)),
+                ('type', models.CharField(max_length=128)),
             ],
         ),
         migrations.AddField(
-            model_name='routestations',
-            name='stationID',
+            model_name='routestation',
+            name='station',
             field=models.ForeignKey(to='StopMe.Station'),
         ),
     ]
