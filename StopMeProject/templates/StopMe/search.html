@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}StopMe! - Search{% endblock %}
+
+{% block body_block %}
+
+  <link href="{% static "css/select2.css" %}" rel="stylesheet">
+  <style type="text/css">
+  body {
+    padding: 40px;
+  }
+  </style>
+
+  <!-- scripts -->
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="{% static "js/select2.js" %}"></script>
+
+  <script>
+    $(function(){
+      // turn the element to select2 select style
+      $('#select2').select2({ width: '100%' });
+    });
+    $(function(){
+      // turn the element to select2 select style
+      $('#select3').select2({ width: '100%' });
+    });
+    $(function(){
+      // turn the element to select2 select style
+      $('#select4').select2({ width: '100%' });
+    });
+    $(function(){
+      // turn the element to select2 select style
+      $('#select5').select2({ width: '100%' });
+    });
+  </script>
+
+<div class="container">
+	<div class="row">
+		<h1 class="text-center">
+			<strong style="font-size:300%;">StopMe!</strong>
+		</h1>
+		<h2 class="text-center">
+			<strong>Never miss a Stop again!</strong>
+		</h2>
+	</div>
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-12 block">
+			<div class="col-md-4 col-md-offset-4">
+				<div class="text-center">
+			    	<p>Type of Transport</p>
+			    	<p>
+			     	   <select id="select2">
+						   {% for transport in type %}
+							<option value={{ transport.type }}>{{ transport.type }}</option>
+							{% endfor %}
+			     	   </select>
+			    	</p>
+					
+					<br>
+			   	 	
+					<p>Origin</p>
+			   		<p>
+			   	   	<select id="select3">
+					  {% for station in origin %}
+					  	<option value={{ station.stationName }}>{{ station.stationName }}</option>
+					  {% endfor %}
+			  		</select>
+					</p>
+					
+					<br>
+					
+					<p>Service</p>
+					<p>
+					<select id="select4">
+						  {% for service in route %}
+					  	<option value={{ service.destination }}>{{ service.origin }} -> {{ service.via }} -> {{ service.destination }}</option>
+					  {% endfor %}
+				     </select>
+			    	</p>
+					
+					<br>
+			   	 	
+					<p>Destination</p>
+			   	 	<p>
+			     	<select id="select5">
+					  {% for station in destination %}
+					  	<option value={{ station.stationName }}>{{ station.stationName }}</option>
+					  {% endfor %}
+			      	</select>
+			    	</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

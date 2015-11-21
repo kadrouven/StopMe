@@ -17,13 +17,15 @@ def index(request):
     context_dict["routestations"] = routestations
     return render_to_response('StopMe/index.html', context_dict, context)
 
-def chooseTransport(request):
+def search(request):
     context = RequestContext(request)
     context_dict = {}
-    station = Station.objects.all()
-    context_dict["station"] = station
+    type = Station.objects.values('type').distinct()
+    context_dict["type"] = type
+    origin = Station.objects.all()
+    context["origin"] = origin
     route = Route.objects.all()
     context_dict["route"] = route
-    routestations = RouteStation.objects.all()
-    context_dict["routestations"] = routestations
-    return render_to_response('StopMe/chooseTransport.html', context_dict, context)
+    destination = Station.objects.all()
+    context_dict["destination"] = destination
+    return render_to_response('StopMe/search.html', context_dict, context)
