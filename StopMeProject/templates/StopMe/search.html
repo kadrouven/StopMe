@@ -6,36 +6,8 @@
 
 {% block body_block %}
 
-  <link href="{% static "css/select2.css" %}" rel="stylesheet">
-  <style type="text/css">
-  body {
-    padding: 40px;
-  }
-  </style>
 
-  <!-- scripts -->
-  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src="{% static "js/select2.js" %}"></script>
-
-  <script>
-    $(function(){
-      // turn the element to select2 select style
-      $('#select2').select2({ width: '100%' });
-    });
-    $(function(){
-      // turn the element to select2 select style
-      $('#select3').select2({ width: '100%' });
-    });
-    $(function(){
-      // turn the element to select2 select style
-      $('#select4').select2({ width: '100%' });
-    });
-    $(function(){
-      // turn the element to select2 select style
-      $('#select5').select2({ width: '100%' });
-    });
-  </script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <div class="container">
 	<div class="row">
 		<h1 class="text-center">
@@ -45,56 +17,123 @@
 			<strong>Never miss a Stop again!</strong>
 		</h2>
 	</div>
-	<br><br><br>
+	<br>
 	<div class="row">
 		<div class="col-md-12 block">
 			<div class="col-md-4 col-md-offset-4">
 				<div class="text-center">
-			    	<p>Type of Transport</p>
-			    	<p>
-			     	   <select id="select2">
-						   {% for transport in type %}
-							<option value={{ transport.type }}>{{ transport.type }}</option>
-							{% endfor %}
-			     	   </select>
-			    	</p>
-					
+					<form action="" method="post">
+					{% csrf_token %}
+	
+	
+	
+					<div class="container">
+					  <h2>Type of Transportation</h2>
+					  
+					  
+	  				  {% if selected_type %}
+					  	  {{ selected_type }}
+					  {% else %}
+					  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Type of Transportation</button>
+					  <div id="demo" class="collapse">
+						  <div style="overflow:scroll; height:200px;">
+			  				  
+					   		      {% for transport in type %}
+								      <input type="submit" name="type" id="type" value="{{ transport.type }}"/>{{ transport.type }}</input><br>
+							      {% endfor %}
+						      
+							</div>
+					    </div>
+						{% endif %}
+						
+						
 					<br>
-			   	 	
-					<p>Origin</p>
-			   		<p>
-			   	   	<select id="select3">
-					  {% for station in origin %}
-					  	<option value={{ station.stationName }}>{{ station.stationName }}</option>
-					  {% endfor %}
-			  		</select>
-					</p>
+  				  {% if selected_type and not selected_origin %}
+					  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo1">Origin</button>
+					  <div id="demo1" class="collapse">
+						  <div style="overflow:scroll; height:200px;">
+		  				  
+					   		      {% for transport in origin %}
+								  		<input type="hidden" name="type" value="{{selected_type}}"></input>
+								      <input type="submit" name="origin" id="type" value="{{ transport.stationName }}"/></input><br>
+							      {% endfor %}
+					      
+							</div>
+						</div>
+				{% elif selected_origin %}
+					{{ selected_origin }}
+				  {% else %}
+				  	Select Origin
+	
+					{% endif %}
 					
-					<br>
+				  <br>
+				  
+    				  {% if selected_type and selected_origin and not selected_route %}
+  					  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">Route</button>
+  					  <div id="demo2" class="collapse">
+  						  <div style="overflow:scroll; height:200px;">
+		  				  
+  					   		      {% for transport in route %}
+  								  		<input type="hidden" name="type" value="{{selected_type}}"></input>
+										<input type="hidden" name="origin" value="{{selected_origin}}"></input>
+  								      <input type="submit" name="route" id="type" value="{{ transport.route.destination }}"/></input><br>
+  							      {% endfor %}
+					      
+  							</div>
+  						</div>
+  				{% elif selected_route %}
+  					{{ selected_route }}
+  				  {% else %}
+  				  	Select route
+	
+  					{% endif %}
 					
-					<p>Service</p>
-					<p>
-					<select id="select4">
-						  {% for service in route %}
-					  	<option value={{ service.destination }}>{{ service.origin }} -> {{ service.via }} -> {{ service.destination }}</option>
-					  {% endfor %}
-				     </select>
-			    	</p>
+				  <br>
+				  </form>
+				  <form action="/map.html" method="post">
+					  {% csrf_token %}
+    				  {% if selected_type and selected_origin and selected_route and not selected_destination %}
+  					  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3">Destination</button>
+  					  <div id="demo3" class="collapse">
+  						  <div style="overflow:scroll; height:200px;">
+		  				  
+  					   		      {% for transport in destination %}
+  								  		<input type="hidden" name="type" value="{{selected_type}}"></input>
+  								  		<input type="hidden" name="origin" value="{{selected_type}}"></input>
+										<input type="hidden" name="route" value="{{selected_route}}"></input>
+  								      <input type="submit" name="destination" id="type" value="{{ transport.station.stationName }}"/></input><br>
+  							      {% endfor %}
+					      
+  							</div>
+  						</div>
+  				{% elif selected_destination %}
+  					{{ selected_destination }}
+  				  {% else %}
+  				  	Select destination
+	
+  					{% endif %}
+
+
 					
-					<br>
-			   	 	
-					<p>Destination</p>
-			   	 	<p>
-			     	<select id="select5">
-					  {% for station in destination %}
-					  	<option value={{ station.stationName }}>{{ station.stationName }}</option>
-					  {% endfor %}
-			      	</select>
-			    	</p>
-				</div>
+					
+					</form>
+				</div></div>
 			</div>
 		</div>
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </div>
 
 {% endblock %}

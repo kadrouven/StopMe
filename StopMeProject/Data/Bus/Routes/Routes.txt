@@ -1,2 +1,2 @@
-77,Buchanan Bus Station,South Glasgow Hospital,Glasgow Airport
-77,Glasgow Airport,South Glasgow Hospital,Buchanan Bus Station
+77,Buchanan Bus Station,South Glasgow Hospital - W,Glasgow Airport
+77,Glasgow Airport,South Glasgow Hospital - E,Buchanan Bus Station

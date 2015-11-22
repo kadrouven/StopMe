@@ -27,7 +27,7 @@ def add_route(filename):
     for line in f:
         line_list = line.strip('\n').split(",")
         print "Adding route to database..."
-        p = Route.objects.get_or_create(serviceNumber=line_list[0], origin=line_list[1], destination=line_list[2], via=line_list[3])
+        p = Route.objects.get_or_create(serviceNumber=line_list[0], origin=Station.objects.get(stationName=line_list[1]), destination=Station.objects.get(stationName=line_list[2]), via=Station.objects.get(stationName=line_list[3]))
 
     print "Closing file...\n"
     f.close()
@@ -37,7 +37,12 @@ def add_routestations(filename):
     f = open(filename, 'rU')
     
     split = f.readline().strip("\n").split(",")
-    route = Route.objects.get(origin=split[0], destination=split[2], via=split[1])
+    print split
+    print Station.objects.get(stationName=split[0])
+    print Station.objects.get(stationName=split[1])
+    print Station.objects.get(stationName=split[2])
+    
+    route = Route.objects.get(origin=Station.objects.get(stationName=split[0]), destination=Station.objects.get(stationName=split[2]), via=Station.objects.get(stationName=split[1]))
 
     print "Reading in routeStations..."
     for line in f:

@@ -1,4 +1,4 @@
-Helensburgh Central,Glasgow,Edinburgh
+Helensburgh Central,Glasgow Queen Street,Edinburgh
 Helensburgh Central
 Craigendoran
 Cardross
