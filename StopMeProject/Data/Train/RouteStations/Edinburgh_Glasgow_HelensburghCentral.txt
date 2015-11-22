@@ -1,4 +1,4 @@
-Edinburgh, Glasgow Queen Street, Helensburgh Central
+Edinburgh,Glasgow Queen Street,Helensburgh Central
 Edinburgh
 Haymarket
 Edinburgh Park

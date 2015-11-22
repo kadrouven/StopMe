@@ -73,6 +73,7 @@ if __name__ == '__main__':
     # Read train RouteStations from file and add them to the db
     
     add_routestations('Data/Train/RouteStations/HelensburghCentral_Glasgow_Edinburgh.txt')
+    add_routestations('Data/Train/RouteStations/Edinburgh_Glasgow_HelensburghCentral.txt')
     
     
     ########## Bus ##########
