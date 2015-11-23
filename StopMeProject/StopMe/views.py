@@ -3,9 +3,6 @@ from django.http import HttpResponse
 from django.template import RequestContext
 from StopMe.models import Station, Route, RouteStation
 
-#def index(request):
-#    return HttpResponse("Rango says hello world!")
-
 def index(request):
     context = RequestContext(request)
     context_dict = {}
@@ -28,6 +25,7 @@ def search(request):
         context_dict["selected_type"] = request.POST.get("type", "")
         origin = Station.objects.filter(type=(request.POST.get("type", "")))
         context["origin"] = origin
+        print "------", request.POST.get("type", "")
         
     if request.POST.get("origin", ""):
         context_dict["selected_origin"] = request.POST.get("origin", "")
@@ -38,9 +36,6 @@ def search(request):
         context_dict["selected_route"] = request.POST.get("route", "")
         destination = RouteStation.objects.filter(route__destination__stationName=request.POST.get("route", ""))
         context_dict["destination"] = destination
-    
-    if request.POST.get("destination", ""):
-        return map()
 
     return render_to_response('StopMe/search.html', context_dict, context)
 

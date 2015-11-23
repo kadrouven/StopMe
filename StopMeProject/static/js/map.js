@@ -3,6 +3,7 @@ var marker = null;
 var makerGoal = null;
 var pos = null;
 var distance = 0;
+var notified = false;
 
 function initMap() {
 	map = new google.maps.Map(document.getElementById('map'), {
@@ -38,6 +39,8 @@ function initMap() {
 			}
 
 			calculateDistance();
+	
+			notify();
 
 			// Centre Map
 			map.setCenter(pos);
@@ -48,6 +51,14 @@ function initMap() {
 		// Browser doesn't support Geolocation
 		handleLocationError(false, infoWindow, map.getCenter());
 	}
+}
+
+function notify(){
+	if (!notified && distance < 0.2){
+		notified = true;
+		window.alert("You are approaching your stop!");
+	}
+	return
 }
 
 // Error Handling
@@ -87,7 +98,7 @@ function changeGoal(lat, lng) {
 function calculateDistance() {
 	if (makerGoal !== null) {
 		distance = getDistanceFromLatLonInKm(pos.lat, pos.lng, makerGoal.getPosition().lat(), makerGoal.getPosition().lng());
-		document.getElementById('text').innerHTML = 'Distance to Destination: ' + distance;
+		document.getElementById('text').innerHTML = 'Distance to Destination: ' + parseFloat(Math.round(distance * 100) / 100).toFixed(2) + ' km';
 	}
 }
 
@@ -109,3 +120,4 @@ function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
 function deg2rad(deg) {
 	return deg * (Math.PI / 180);
 }
+

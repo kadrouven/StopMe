@@ -1,0 +1,137 @@
+{% extends 'base.html' %} {% load staticfiles %} {% block title %}StopMe! - Search{% endblock %} {% block body_block %}
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<div class="container">
+	<div class="row">
+		<h1 class="text-center">
+			<strong style="font-size:300%;">StopMe!</strong>
+		</h1>
+		<h2 class="text-center">
+			<strong>Never miss a Stop again!</strong>
+		</h2>
+	</div>
+
+	<br>
+
+	<div class="row">
+		<div class="col-md-12 block">
+				<div class="text-center">
+					<form action="" method="post" id="form_type">
+						{% csrf_token %}
+						<div class="container">
+							<h2>Type of Transportation</h2>
+							{% if selected_type %}
+								{{ selected_type }}
+							{% else %}
+								<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Type of Transportation</button>
+								<div id="demo" class="collapse">
+									<div class="searcher" style="overflow:scroll; height:200px;">
+										<input class="search" placeholder="Search" />
+										{% for transport in type %}
+										<button class="btn btn-primary btn-block" type="submit" value="submit" form="form_type" />{{ transport.type }}</button>
+										{% endfor %}
+
+									</div>
+								</div>
+							{% endif %}
+							
+							<script src="http://listjs.com/no-cdn/list.js"></script>
+							<script>
+							var options = {
+							  valueNames: [ 'btn btn-primary btn-block' ]
+							};
+
+							var userList = new List('demo', options);
+							</script>
+						
+							<br>
+							<h2>Origin</h2>
+							{% if selected_type and not selected_origin %}
+								<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo1">Origin</button>
+								<div id="demo1" class="collapse">
+									<div style="overflow:scroll; height:200px;">
+
+										{% for transport in origin %}
+										<input type="hidden" name="type" value="{{selected_type}}"></input>
+										<input class="btn btn-primary btn-block" type="submit" name="origin" id="type" value="{{ transport.stationName }}" /></input>
+										{% endfor %}
+
+									</div>
+								</div>
+							{% elif selected_origin %}
+								{{ selected_origin }}
+							{% else %}
+								Select Origin
+							{% endif %}
+
+							<br>
+							<h2>Route</h2>
+							{% if selected_type and selected_origin and not selected_route %}
+								<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">Route</button>
+								<div id="demo2" class="collapse">
+									<div style="overflow:scroll; height:200px;">
+
+										{% for transport in route %}
+										<input type="hidden" name="type" value="{{selected_type}}"></input>
+										<input type="hidden" name="origin" value="{{selected_origin}}"></input>
+										<input class="btn btn-primary btn-block" type="submit" name="route" id="type" value="{{ transport.route.destination }}" /></input>
+										{% endfor %}
+
+									</div>
+								</div>
+							{% elif selected_route %}
+								{{ selected_route }}
+							{% else %}
+								Select route
+							{% endif %}
+
+							<br>
+	
+							</form>
+							<h2>Destination</h2>
+							<form action="/map.html" method="post">
+								{% csrf_token %}
+								{% if selected_type and selected_origin and selected_route and not selected_destination %}
+									<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3">Destination</button>
+									<div id="demo3" class="collapse">
+										<div style="overflow:scroll; height:200px;">
+											<input type="hidden" name="type" value="{{selected_type}}"></input>
+											<input type="hidden" name="origin" value="{{selected_type}}"></input>
+											<input type="hidden" name="route" value="{{selected_route}}"></input>
+<div class="span2">
+											{% for transport in destination %}
+													<input class="btn btn-primary btn-block" type="submit" name="destination" id="type" value="{{ transport.station.stationName }}" /></input>
+									
+											{% endfor %}
+</div>
+										</div>
+									</div>
+								{% elif selected_destination %}
+									{{ selected_destination }}
+								{% else %}
+									Select destination
+								{% endif %}
+
+
+
+
+							</form>
+					</div>
+				</div>
+		
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+{% endblock %}

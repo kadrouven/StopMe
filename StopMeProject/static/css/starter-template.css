@@ -8,8 +8,25 @@ body {
     background-size: cover;
 	color:#fff;
   	background-color:#333;
-  	font-family: 'Open Sans',Arial,Helvetica,Sans-Serif;
+  	font-family: 'Open Sans',Arial,Sans-Serif;
 	font-size: 14pt;
+	font-weight:900;
+}
+
+h2{
+	font-weight:900;
+}
+
+.btn-block{
+	font-weight:900;
+}
+
+.search{
+	color:black;
+}
+
+.btn-xxl {
+		font-weight:900;
 }
 
 a:link, a:visited {
@@ -20,8 +37,8 @@ a:link, a:visited {
 	background-color:rgba(0,0,0,0.4);
   	padding-left:12px;
   	padding-right:12px;
-	padding-bottom:12px;
-	padding-top:12px;
+	padding-bottom:10px;
+	padding-top:10px;
 	height:100%;
 }
 
@@ -35,7 +52,11 @@ a:link, a:visited {
 }
 
 .block-sm {
-    height:180px;
+    padding-bottom:10px;
+				width:320px;
+				float: none;
+				margin: 5px auto;
+				
 }
 
 .btn-flat {

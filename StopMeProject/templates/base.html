@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
@@ -27,10 +27,22 @@
     <![endif]-->
 		
 	<!-- Additional scripts -->
+	<script src="{% static "js/jquery-1.11.3.min.js" %}"></script>
 	{% block head %}{% endblock %}
+	
+	<style>
+	      html, body {
+	        height: 100%;
+	        margin: 0;
+	        padding: 0;
+	      }
+	      #map {
+	        height: 100%;
+	      }
+	    </style>
   </head>
 
-  <body>
+  <body style="height:100%;">
 	  
 	<!-- Body here -->
 	 
@@ -45,3 +57,4 @@
 	<script src="{% static "js/ie10-viewport-bug-workaround.js" %}"></script>
   </body>
 </html>
+

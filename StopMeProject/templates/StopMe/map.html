@@ -7,52 +7,26 @@
 {% block body_block %}
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<div class="container">
-	<div class="row">
-		<h1 class="text-center">
-			<strong style="font-size:300%;">StopMe!</strong>
-		</h1>
-		<h2 class="text-center">
-			<strong>Never miss a Stop again!</strong>
-		</h2>
-	</div>
-	<br>
-	<div class="row">
-		<div class="col-md-12 block">
-			<div class="col-md-4 col-md-offset-4">
-				<div class="text-center">
-					{{ final_destination.stationName }} {{ final_destination.lat }} {{ final_destination.lng }}
-					<script>
+<div class="container" style="height:100%;">
+	<div class="block" style="height:100%;">
+			<div class="text-center" style="height:100%;">
+				<h2>{{ final_destination.stationName }}</h2>
+				<script type="text/javascript">
 					window.onload = function() {
 					  changeGoal({{ final_destination.lat }}, {{ final_destination.lng }});
 					};
-					</script>
-					<div id="text"></div>
-					<div id="text2"></div>
-					<div id="map" style="height:85%"></div>
-					</div>
-					</div>
-
-					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWm00u9WjNOK4f6Fr4yA06kdc4hx3Syqc&signed_in=true&callback=initMap" async defer>
-					</script>
 					
-				</div>
+				</script>
+				<div id="text"></div>
+				<div id="text2"></div><br>
+				<div id="map" style="height:85%"></div>
+				
+    			<script src="{% static "js/map.js" %}"></script>
+				<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDWm00u9WjNOK4f6Fr4yA06kdc4hx3Syqc&amp;signed_in=true&amp;callback=initMap" async="" defer type="text/javascript">
+				</script>
 			</div>
 		</div>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 </div>
+
 
 {% endblock %}
