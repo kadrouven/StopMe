@@ -17,9 +17,9 @@
 	<div class="row">
 		<div class="block block-sm">
 			<div class="text-center">
-				<h3 style="margin-top:5px;">
+				<h2 style="margin-top:5px;">
 					Transport Near Me
-				</h3>
+				</h2>
 				<h4>
 					Let us find all transports around you. You only need to choose your transport.
 				</h4>
@@ -31,11 +31,11 @@
 		</div>
 		<div class="block block-sm">
 			<div class="text-center">
-				<h3 style="margin-top:5px;">
+				<h2 style="margin-top:5px;">
 					Search For Transport
-				</h3>
+				</h2>
 				<h4>
-					If you are on a train or bus already, you can search for all transports'
+					If you are on a train or bus already, you can search for all transport'
 				</h4>
 				<p>
 					<span class="glyphicon glyphicon-search" style="font-size:3em;" aria-hidden="true"></span>
@@ -43,7 +43,40 @@
 				<a class="btn btn-primary btn-block" href="/search">Search</a>
 			</div>
 		</div>
+		
+		<div class="block block-sm">
+			<div class="text-center">
+				<h2 style="margin-top:0px;">Quick Search</h2>
+				<form action="/map.html" method="post">
+					{% csrf_token %}
+					<button type="button" style="margin-bottom:5px;" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#demo3">Select Destination</button>
+					<div id="demo3" class="collapse">
+						<div style="overflow:scroll; height:200px;">
+							<div id="users3">
+								<input class="search" placeholder="Search" style="margin-bottom:5px;"/>
+								<ul class="list">
+									{% for station in stations %}
+										<li style="margin-bottom:5px; margin-left:-40px;">
+											<button class="btn btn-primary btn-block" name="destination" id="destination" value="{{ station.stationName }}"type="submit">{{ station.stationName }}</button>
+										</li>
+									{% endfor %}
+								</ul>
+
+								<script src="http://listjs.com/no-cdn/list.js"></script>
+								<script>
+								var options = {
+								valueNames: [ 'btn btn-primary btn-block' ]
+								};
+
+								var userList = new List('users3', options);
+								</script>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
 </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 {% endblock %}
